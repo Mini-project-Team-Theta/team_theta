@@ -34,7 +34,7 @@ def read_weather_data(venue_name):
     avg_file_path = glob(data_dir + venue_name + "avg_*")
     venue_avg = pd.read_csv(avg_file_path[0], na_values=['-'], encoding="ISO-8859-1")
     venue_avg["Date"] = pd.to_datetime(venue_avg[["Year", "Month", "Day"]])
-    venue_avg = venue_avg.drop([ "Year", "Month", "Day","Time [Local time]"], axis=1)
+    venue_avg = venue_avg.drop(["Time [Local time]"], axis=1)
 
     return venue_cloud, venue_avg
 
