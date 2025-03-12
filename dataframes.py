@@ -24,6 +24,25 @@ vuokatti_url = pd.read_csv(vuokatti_url)
 
 #Continue from here
 
+def check_nan_sum(df):
+    return df.isna().sum()
 
+def check_datatypes(df):
+    return df.dtypes
+
+# Prints sum of NaN values for each df
+for name, obj in list(globals().items()):
+    if isinstance(obj, pd.DataFrame):  # Ensure it's a DataFrame
+        print(f"NaN count in {name}:")
+        print(check_nan_sum(obj))
+        print("-" * 30)
+
+# Prints datatypes 
+for name, obj in list(globals().items()):
+    if isinstance(obj, pd.DataFrame): 
+        print(f"Datatypes in {name}:")
+        print(check_datatypes(obj))
+        print("-" * 30)
+  
 
 
