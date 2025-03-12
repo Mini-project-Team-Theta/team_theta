@@ -39,14 +39,12 @@ for name, obj in list(globals().items()):
         replace_comma(obj)
 
 
-'''
 # Prints sum of NaN values for each df
 for name, obj in list(globals().items()):
     if isinstance(obj, pd.DataFrame):  # Ensure it's a DataFrame
         print(f"NaN count in {name}:")
         print(check_nan_sum(obj))
         print("-" * 30)
-''' 
 
 # Prints datatypes 
 for name, obj in list(globals().items()):
@@ -54,7 +52,8 @@ for name, obj in list(globals().items()):
         print(f"Datatypes in {name}:")
         print(check_datatypes(obj))
         print("-" * 30)
-      
+
+# Prints sample      
 for name, obj in list(globals().items()):
     if isinstance(obj, pd.DataFrame):
         print(obj.sample(5))

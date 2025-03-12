@@ -1,4 +1,4 @@
-"ï»¿""Observation station""",Year,Month,Day,Snow depth [cm],Date,Average temperature [Â°C],cloud_code,Global radiation mean [W/m2]
+Observation station,Year,Month,Day,Snow depth [cm],Date,Average temperature [Â°C],cloud_code,Global radiation mean [W/m2]
 Pelkosenniemi parish,2014,1,1,30,2014-01-01,-8.0,8.0,"-0,5"
 Pelkosenniemi parish,2014,1,2,30,2014-01-02,-6.6,8.0,"-0,2"
 Pelkosenniemi parish,2014,1,3,30,2014-01-03,-3.9,8.0,"0,1"
