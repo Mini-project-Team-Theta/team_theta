@@ -33,8 +33,13 @@ def check_datatypes(df):
     return df.dtypes
 
 def replace_comma(df):
-    if 'Global radiation mean [W/m2]' in df.columns:
-        df['Global radiation mean [W/m2]'] = df['Global radiation mean [W/m2]'].str.replace(",", ".",).astype(float)
+    for col in df.columns:
+        if df[col].dtype == 'object':  
+            df[col] = df[col].str.replace(",", ".", regex=False)  
+            try:
+                df[col] = df[col].astype(float)  
+            except ValueError:
+                pass
 
 def change_column_name_celcius(df):
     for col in df.columns:
@@ -55,7 +60,7 @@ def reorder_columns_all_dfs(column_order):
 def change_column_name_snowdepth(df):
     for col in df.columns:
         if col.startswith('Snow depth'):
-            df.rename(columns={col: 'Snow depth mean [cm]'}, inplace=True)
+            df.rename(columns={col: 'Snow depth mean [cm]'}, inplace=True) 
 
 #Convert to csv files
 def save_dfs_to_csv(target_dir='csv_files'):
