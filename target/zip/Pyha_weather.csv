@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-"ï»¿""Observation station""",Year,Month,Day,Snow depth [cm],Date,Average temperature [Â°C],cloud_code,Global radiation mean [W/m2]
+Observation station,Year,Month,Day,Snow depth [cm],Date,Average temperature [Â°C],cloud_code,Global radiation mean [W/m2]
 SodankylÃ¤ TÃ¤htelÃ¤,2004,1,1,35.0,2004-01-01,-29.6,0.0,"0,2"
 SodankylÃ¤ TÃ¤htelÃ¤,2004,1,2,35.0,2004-01-02,-22.0,7.0,"-0,2"
 SodankylÃ¤ TÃ¤htelÃ¤,2004,1,3,35.5,2004-01-03,-18.9,7.0,"0,3"
